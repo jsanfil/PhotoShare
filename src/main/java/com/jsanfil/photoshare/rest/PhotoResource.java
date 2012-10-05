@@ -27,7 +27,7 @@ public class PhotoResource {
 	PhotoMapper photoMapper;
 	
 	@GET
-	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+	@Produces({ MediaType.APPLICATION_JSON})
 	public List<Photo> findAll() {
 		System.out.println("findAll");
 		return photoMapper.selectAll();
