@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry location="/Users/jsanfili/.m2/repository/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar" />
+  <context id="PhotoShare">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+    	connectionURL="jdbc:mysql://localhost/photoshare"
+    	userId="root"
+    	password="">
+    </jdbcConnection>
+    <javaModelGenerator targetPackage="com.jsanfil.photoshare.model" targetProject="PhotoShare/src/main/java" />
+    <sqlMapGenerator targetPackage="com.jsanfil.photoshare.persistence" targetProject="PhotoShare/src/main/resources" />
+    <javaClientGenerator targetPackage="com.jsanfil.photoshare.persistence" targetProject="PhotoShare/src/main/java" type="XMLMAPPER">
+    	<property name="exampleMethodVisibility" value="private"/>
+   	</javaClientGenerator>
+    <table schema="photoshare" tableName="photos" domainObjectName="Photo">
+      <property name="useActualColumnNames" value="true"/>
+    </table>
+  </context>
+</generatorConfiguration>
